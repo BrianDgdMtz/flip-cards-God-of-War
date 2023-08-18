@@ -1,0 +1,238 @@
+/*
+    ** All elements border-box
+*/
+*,
+*:before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    ** Root element font size
+    ** No default margins and paddings
+*/
+
+html{
+    /* Me permite deslizar cuando hago click en los links del menu */
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    **root elements display block
+*/
+html,
+body {
+    display: block;
+}
+
+/*
+    ** Body main style
+*/
+body {
+    line-height: 1.317101995;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    background-color: #ffffff;
+}
+
+button:focus {
+    outline: 0;
+}
+
+img,
+embed,
+svg,
+audio,
+canvas,
+iframe,
+video {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+hr {
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid #dfdfdf;
+    margin: 0;
+}
+
+body {
+    color: #5c7470;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0;
+    background: linear-gradient(to top, rgba(30, 35, 38, .3), rgba(30, 35, 38, .6)),
+    url(images/fondo.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 100px;
+    background: #600000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    display: inline-block;
+    vertical-align: middle;
+    width: 180px;
+}
+
+.logo img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.header .navbar a{
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+}
+
+h1 {
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+}
+
+p {
+    margin: 0;
+    color: #fff;
+}
+
+.personajes{
+    margin-top: 25px;
+}
+
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-gap: 80px;
+    padding-bottom: 60px;
+}
+
+/* FLIP CARD */
+.flip-card {
+    width: 320px;
+    height: 504px;
+    perspective: 2000px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+    border-radius: 28px;
+    transition: all 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
+    transform-style: preserve-3d;
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flip-card-front h3{
+    position: absolute;
+    bottom: -18.5px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, .7);
+    text-align: center;
+    border-end-start-radius: 27px;
+    border-end-end-radius: 27px;
+}
+
+.flip-card-back {
+    font-size: 1.25rem;
+    text-align: justify;
+    display: grid;
+    place-items: center;
+    padding: 32px;
+    background-color: #55686f;
+    transform: rotateY(180deg);
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(-180deg);
+}
+
+/* FOOTER */
+footer{
+    left: 0;
+    padding: 1rem 8%;
+    background-color: #003087;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto;
+    width: 100%;
+}
+
+.logoPS{
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.copyright{
+    font-family: Arial;
+    color: #fff;
+    font-size: 18px;
+}
+

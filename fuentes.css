@@ -1,0 +1,18 @@
+@font-face{
+    src: url('fonts/GODOFWAR.TTF');
+    font-family: 'godofwar';
+}
+
+@font-face{
+    src: url('fonts/Berserker-Regular.ttf');
+    font-family: 'ragnarok';
+}
+
+.fuente{
+    font-family: godofwar;
+    color: #fff;
+}
+
+.fuente2{
+    font-family: ragnarok;
+}
